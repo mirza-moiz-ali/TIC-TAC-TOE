@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TIC-TAC-TOE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <h1>TIC-TAC-TOE</h1>
-        <button class="new-game"> New Game</button>
+
+        <!-- <button class="new-game"> New Game</button> -->
+        <div class="msg-container hide">
+            <h1 class="msg">WINNER</h1>
+             <button class="new-game"> New Game</button>
+        </div>
         <div class="container">
             <div class="game">
-                <button class="btn">x</button>
+                <button class="btn"></button>
                 <button class="btn"></button>
                       <button class="btn"></button>
                          <button class="btn"></button>
@@ -27,6 +32,7 @@
             Reset Game
         </button>
     </main>
+    <script src="script.js"></script>
     
 </body>
 </html>

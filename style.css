@@ -34,6 +34,8 @@ body{
     
     border-radius: 2vmin;
     font-size: 9vmin;
+    background-color: white;
+    color: black;
   
 
 }
@@ -55,4 +57,15 @@ body{
    cursor: pointer;
 
 
+}
+.msg-container{
+    height: 30vmin;
+
+
+}
+.msg{
+    font-size: 12vmin;
+}
+.hide{
+    display: none;
 }
