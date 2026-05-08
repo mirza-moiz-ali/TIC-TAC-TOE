@@ -4,7 +4,11 @@ let newGameBtn = document.querySelector(".new-game");
 let msg = document.querySelector(".msg");
 let msgContainer = document.querySelector(".msg-container")
 
+let xScore = 0;
+let oScore = 0;
 
+const xScoreText = document.getElementById("x-score");
+const oScoreText = document.getElementById("o-score");
 
 
 let turnO = true; //player turn(x,o)
@@ -71,12 +75,22 @@ const checkWinner = () => {
         let pos2val = boxes[pattern[1]].innerText;
         let pos3val = boxes[pattern[2]].innerText;
 
-        if(pos1val != "" && pos2val != "" && pos3val != "")
-            if(pos1val === pos2val && pos2val === pos3val){
-                console.log("winner" , pos1val);
-                showWinner(pos1val);
-            }
+        if(pos1val != "" && pos2val != "" && pos3val != ""){
+    if(pos1val === pos2val && pos2val === pos3val){
+        console.log("winner" , pos1val);
 
+        if(pos1val === "X"){
+            xScore++;
+            xScoreText.innerText = xScore;
+        }
+        else if(pos1val === "O"){
+            oScore++;
+            oScoreText.innerText = oScore;
+        }
+
+        showWinner(pos1val);
+    }
+}
 
 
     }
